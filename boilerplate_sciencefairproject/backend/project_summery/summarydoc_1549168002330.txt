@@ -1,0 +1,10 @@
+
+
+kill $(lsof -t -i:8080)
+
+
+
+in windows
+netstat -ano | findstr :<yourPortNumber>
+
+ taskkill /PID <typeyourPIDhere> /F. P.S.

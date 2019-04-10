@@ -1,0 +1,20 @@
+sudo nginx -t
+
+[heenal@sciencefair1 ~]$ sudo nginx -t
+[sudo] password for heenal:
+nginx: the configuration file /usr/local/nginx/conf/nginx.conf syntax is ok
+nginx: configuration file /usr/local/nginx/conf/nginx.conf test is successful
+[heenal@sciencefair1 ~]$
+
+sudo certbot --nginx -d sciencefair1.usm.edu -d www.sciencefair1.usm.edu
+
+ sudo certbot --nginx -d sciencefair1.usm.edu -d www.sciencefair1.usm.edu
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+Error while running nginx -c /etc/nginx/nginx.conf -t.
+
+nginx: [emerg] open() "/etc/nginx/nginx.conf" failed (2: No such file or directory)
+nginx: configuration file /etc/nginx/nginx.conf test failed
+
+The nginx plugin is not working; there may be problems with your existing configuration.
+The error was: MisconfigurationError('Error while running nginx -c /etc/nginx/nginx.conf -t.\n\nnginx: [emerg] open() "/etc/nginx/nginx.conf" failed (2: No such file or directory)\nnginx: configuration file /etc/nginx/nginx.conf test failed\n',)
+
