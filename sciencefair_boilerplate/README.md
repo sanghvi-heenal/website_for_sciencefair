@@ -1,9 +1,9 @@
 <div align="center">
-<h1> Online Platform for Mississippi Science & Engineering Fair Region I <a href="https://scinecefair1.usm.edu">MSEF Region I </a></h1>
+<h1> Online Platform for Mississippi Science & Engineering Fair Region I <a href="https://sciencefair1.usm.edu">MSEF Region I </a></h1>
 
 <dl>
   <dt>This Website is developed to handle Student registrations, Online Scoring platform for judges  and perform stats to generate results based on judging criteria</dt>
-  <dt> It was developed first in react then in React boilerplate by Max Stoiber </dt>
+  <dt> It was developed first in react then in React boilerplate created by <a href="https://twitter.com/mxstbr">Max Stoiber</a> and maintained with ❤️ by an amazing <a href="https://github.com/orgs/react-boilerplate/teams/core">team of developers</a></dt>
   <dt>Some features of the boilerplate include </dt>
   ## Features
 
