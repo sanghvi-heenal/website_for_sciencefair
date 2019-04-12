@@ -1,0 +1,281 @@
+.Trial {
+	height: 100px;
+}
+
+.Appbody {
+	height: 100%;
+	background-size: cover;
+}
+
+.vikas {
+	/* Add the blur effect */
+
+	z-index: -1;
+
+	/* Full height */
+	height: 100%;
+
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.App-logo {
+	animation: App-logo-spin infinite 20s linear;
+	height: 80px;
+	z-index: 2;
+}
+
+.App-header {
+	background-image: url('./Images/back.jpg');
+	height: 150px;
+	padding: 20px;
+	color: white;
+	z-index: 2;
+}
+.App-title {
+	font-size: 1.5em;
+	z-index: 2;
+}
+
+.App-intro {
+	font-size: large;
+}
+
+ul#tabs {
+	list-style-type: none;
+	margin: 0;
+	padding: 5px 10px;
+	overflow: hidden;
+	background-color: rgba(222, 231, 231, 0.253);
+	display: flex;
+	justify-content: center;
+}
+
+@media (max-width: 650px) {
+	ul#tabs {
+		display: flex;
+		flex-direction: column;
+		/* justify-content: center; */
+		align-items: center;
+	}
+}
+
+ul#tabs li {
+	float: left;
+	font-size: 20px;
+	font-weight: 600;
+	font-style: normal;
+}
+
+li a {
+	display: block;
+	padding: 15px 40px;
+	text-decoration: none;
+}
+
+li a:hover:not(.active) {
+	background-color: #9f9999;
+	text-decoration: none;
+}
+
+.active {
+	background-color: #4caf50;
+}
+
+@keyframes App-logo-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+a:hover {
+	color: white;
+	text-decoration: none;
+}
+a:visited {
+	color: black;
+}
+
+/* #tabs link {
+  float: left;
+  margin: 0 .5em 0 0;
+  text-align: center;
+}
+
+#tabs link {
+  position: relative;
+  background: rgb(1, 10, 6);
+  padding: .7em 3.5em;
+  float: left;
+  text-decoration: none;
+  color: #444;
+
+  border-radius: 5px 0 0 0;
+
+} */
+/* 
+#tabs li :hover,
+#tabs li:hover::after,
+#tabs li :focus,
+#tabs li :focus::after {
+  background: black ;
+}
+
+#tabs :-moz-any-link:focus {
+  outline: 0;
+}
+
+#tabs link::after {
+  content:'';
+  position:absolute;
+  z-index: 1;
+  top: 0;
+  right: -.5em;  
+  bottom: 0;
+  width: 1em;
+  background: #ddd;
+  
+}
+
+#tabs #current a,
+#tabs #current a::after {
+  background: #fff;
+  z-index: 3;
+} */
+
+ol.progtrckr {
+	list-style-type: none;
+	padding: 0;
+}
+
+ol.progtrckr li {
+	display: inline-block;
+	text-align: center;
+	line-height: 4.5rem;
+	cursor: pointer;
+}
+
+ol.progtrckr li span {
+	padding: 0 1.5rem;
+}
+
+@media (max-width: 650px) {
+	.progtrckr li span {
+		display: none;
+	}
+}
+.progtrckr em {
+	display: none;
+	font-weight: 700;
+	padding-left: 1rem;
+}
+
+@media (max-width: 650px) {
+	.progtrckr em {
+		display: inline;
+	}
+}
+
+ol.progtrckr li.progtrckr-todo {
+	color: silver;
+	border-bottom: 4px solid silver;
+}
+
+ol.progtrckr li.progtrckr-doing {
+	color: black;
+	border-bottom: 4px solid #cccccc;
+}
+
+ol.progtrckr li.progtrckr-done {
+	color: black;
+	border-bottom: 4px solid #5cb85c;
+}
+
+ol.progtrckr li:after {
+	content: '\00a0\00a0';
+}
+
+ol.progtrckr li:before {
+	position: relative;
+	bottom: -3.7rem;
+	float: left;
+	left: 50%;
+	border-radius: 15px;
+}
+
+ol.progtrckr li.progtrckr-todo:before {
+	content: '\039F';
+	color: silver;
+	background-color: white;
+	width: 1.2em;
+	line-height: 1.4em;
+}
+
+ol.progtrckr li.progtrckr-todo:hover:before {
+	color: #ff4500;
+}
+
+ol.progtrckr li.progtrckr-doing:before {
+	content: '\2022';
+	color: white;
+	background-color: #cccccc;
+	width: 1.2em;
+	line-height: 1.2em;
+	border-radius: 1.2em;
+}
+
+ol.progtrckr li.progtrckr-doing:hover:before {
+	color: #ff4500;
+}
+
+ol.progtrckr li.progtrckr-done:before {
+	content: '\2713';
+	color: white;
+	background-color: #5cb85c;
+	width: 1.2em;
+	line-height: 1.2em;
+	border-radius: 1.2em;
+}
+
+ol.progtrckr li.progtrckr-done:hover:before {
+	color: #333;
+}
+
+.progtrckr li {
+	width: 80px;
+}
+
+.footer-buttons {
+	margin-top: 30px;
+}
+
+.btn {
+	background: grey;
+	border-radius: 4px;
+	border: none;
+	padding: 10px 20px;
+	cursor: pointer;
+}
+
+.btn:hover {
+	background: #9f9999;
+}
+
+.btn-next {
+	margin-right: 80px;
+}
+
+.btn-prev {
+	margin-left: 80px;
+}
+
+table {
+	width: 80vw;
+	table-layout: auto;
+	border-collapse: collapse;
+}

@@ -1,0 +1,74 @@
+.carousel {
+    
+    max-width: 1000px !important;
+    width: 800px !important;
+    height: 400px !important;
+    
+  }
+  img {
+    object-fit: cover;
+    
+  }
+
+  .Instructions
+  {
+      
+    justify-content: space-between;
+    padding: 30px;
+    
+    background-color: rgb(228, 200, 79)
+  }
+  .Move{
+    padding: 20px;
+    /* background-color: #735200;
+    */
+
+    background-color: rgb(228, 200, 79)
+  }
+
+ 
+  .homepage{
+    padding: 20px;
+  }
+textarea{
+  font-size: 20px ;
+}
+.finalDisplay{
+  padding:0;
+  margin:0;
+}
+
+
+.fairs1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+.fairs2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+.homepara{
+  padding : 10px 20px;
+}
+.Updates
+{
+  padding : 20px 50px;
+}
+
+/* .example{
+  font-size: 20px;
+} */
+input {
+  font-size: "20px";
+}
+
+.Datecss
+{
+-webkit-text-fill-color:white;
+}
+.UpdatesUI
+{
+  -webkit-text-size-adjust: 10% ;
+  -webkit-text-fill-color:  blue;
+  -webkit-text-stroke-width: 0.1ch;
+}

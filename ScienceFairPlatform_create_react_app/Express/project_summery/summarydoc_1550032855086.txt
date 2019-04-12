@@ -1,0 +1,255 @@
+sudo yum install epel-release
+[sudo] password for heenal:
+Loaded plugins: fastestmirror, langpacks
+Determining fastest mirrors
+epel/x86_64/metalink                                     |  19 kB     00:00
+ * base: mirror.steadfastnet.com
+ * epel: www.gtlib.gatech.edu
+ * extras: distro.ibiblio.org
+ * updates: mirror.teklinks.com
+base                                                     | 3.6 kB     00:00
+centos-sclo-rh                                           | 3.0 kB     00:00
+centos-sclo-sclo                                         | 2.9 kB     00:00
+epel                                                     | 4.7 kB     00:00
+extras                                                   | 3.4 kB     00:00
+mongodb-org-4.0                                          | 2.5 kB     00:00
+nodesource                                               | 2.5 kB     00:00
+updates                                                  | 3.4 kB     00:00
+(1/7): centos-sclo-sclo/x86_64/primary_db                  | 257 kB   00:00
+(2/7): centos-sclo-rh/x86_64/primary_db                    | 3.6 MB   00:01
+(3/7): epel/x86_64/updateinfo                              | 955 kB   00:02
+(4/7): mongodb-org-4.0/7/primary_db                        |  29 kB   00:00
+(5/7): nodesource/x86_64/primary_db                        |  44 kB   00:00
+(6/7): updates/7/x86_64/primary_db                         | 1.4 MB   00:00
+(7/7): epel/x86_64/primary_db                              | 6.6 MB   00:01
+Package epel-release-7-11.noarch already installed and latest version
+Nothing to do
+[heenal@sciencefair1 ~]$
+[heenal@sciencefair1 ~]$
+[heenal@sciencefair1 ~]$
+[heenal@sciencefair1 ~]$ sudo yum install certbot-nginx
+Loaded plugins: fastestmirror, langpacks
+Loading mirror speeds from cached hostfile
+ * base: mirror.steadfastnet.com
+ * epel: www.gtlib.gatech.edu
+ * extras: distro.ibiblio.org
+ * updates: mirror.teklinks.com
+Resolving Dependencies
+--> Running transaction check
+---> Package python2-certbot-nginx.noarch 0:0.29.1-1.el7 will be installed
+--> Processing Dependency: certbot >= 0.22.0 for package: python2-certbot-nginx-0.29.1-1.el7.noarch
+--> Processing Dependency: python2-acme >= 0.26.0 for package: python2-certbot-nginx-0.29.1-1.el7.noarch
+--> Processing Dependency: python2-certbot >= 0.22.0 for package: python2-certbot-nginx-0.29.1-1.el7.noarch
+--> Processing Dependency: pyparsing for package: python2-certbot-nginx-0.29.1-1.el7.noarch
+--> Running transaction check
+---> Package certbot.noarch 0:0.29.1-1.el7 will be installed
+---> Package pyparsing.noarch 0:1.5.6-9.el7 will be installed
+---> Package python2-acme.noarch 0:0.29.1-1.el7 will be installed
+--> Processing Dependency: pyOpenSSL >= 0.13 for package: python2-acme-0.29.1-1.el7.noarch
+--> Processing Dependency: python-ndg_httpsclient for package: python2-acme-0.29.1-1.el7.noarch
+--> Processing Dependency: python-requests-toolbelt for package: python2-acme-0.29.1-1.el7.noarch
+--> Processing Dependency: python2-cryptography for package: python2-acme-0.29.1-1.el7.noarch
+--> Processing Dependency: python2-josepy for package: python2-acme-0.29.1-1.el7.noarch
+--> Processing Dependency: python2-pyasn1 for package: python2-acme-0.29.1-1.el7.noarch
+--> Processing Dependency: python2-pyrfc3339 for package: python2-acme-0.29.1-1.el7.noarch
+--> Processing Dependency: python2-requests for package: python2-acme-0.29.1-1.el7.noarch
+--> Processing Dependency: python2-six for package: python2-acme-0.29.1-1.el7.noarch
+---> Package python2-certbot.noarch 0:0.29.1-1.el7 will be installed
+--> Processing Dependency: python-parsedatetime for package: python2-certbot-0.29.1-1.el7.noarch
+--> Processing Dependency: python-zope-component for package: python2-certbot-0.29.1-1.el7.noarch
+--> Processing Dependency: python-zope-interface for package: python2-certbot-0.29.1-1.el7.noarch
+--> Processing Dependency: python2-configargparse for package: python2-certbot-0.29.1-1.el7.noarch
+--> Processing Dependency: python2-future for package: python2-certbot-0.29.1-1.el7.noarch
+--> Processing Dependency: python2-mock for package: python2-certbot-0.29.1-1.el7.noarch
+--> Running transaction check
+---> Package pyOpenSSL.x86_64 0:0.13.1-4.el7 will be installed
+---> Package python-ndg_httpsclient.noarch 0:0.3.2-1.el7 will be installed
+---> Package python-requests-toolbelt.noarch 0:0.8.0-1.el7 will be installed
+--> Processing Dependency: python-requests for package: python-requests-toolbelt-0.8.0-1.el7.noarch
+---> Package python-zope-component.noarch 1:4.1.0-3.el7 will be installed
+--> Processing Dependency: python-zope-event for package: 1:python-zope-component-4.1.0-3.el7.noarch
+---> Package python-zope-interface.x86_64 0:4.0.5-4.el7 will be installed
+---> Package python2-configargparse.noarch 0:0.11.0-1.el7 will be installed
+---> Package python2-cryptography.x86_64 0:1.7.2-2.el7 will be installed
+--> Processing Dependency: python-idna >= 2.0 for package: python2-cryptography-1.7.2-2.el7.x86_64
+--> Processing Dependency: python-cffi >= 1.4.1 for package: python2-cryptography-1.7.2-2.el7.x86_64
+--> Processing Dependency: python-enum34 for package: python2-cryptography-1.7.2-2.el7.x86_64
+---> Package python2-future.noarch 0:0.16.0-6.el7 will be installed
+---> Package python2-josepy.noarch 0:1.1.0-1.el7 will be installed
+---> Package python2-mock.noarch 0:1.0.1-10.el7 will be installed
+---> Package python2-parsedatetime.noarch 0:2.4-5.el7 will be installed
+---> Package python2-pyasn1.noarch 0:0.1.9-7.el7 will be installed
+---> Package python2-pyrfc3339.noarch 0:1.0-2.el7 will be installed
+---> Package python2-requests.noarch 0:2.6.0-0.el7 will be installed
+---> Package python2-six.noarch 0:1.9.0-0.el7 will be installed
+--> Running transaction check
+---> Package python-cffi.x86_64 0:1.6.0-5.el7 will be installed
+--> Processing Dependency: python-pycparser for package: python-cffi-1.6.0-5.el7.x86_64
+---> Package python-enum34.noarch 0:1.0.4-1.el7 will be installed
+---> Package python-idna.noarch 0:2.4-1.el7 will be installed
+---> Package python-requests.noarch 0:2.6.0-1.el7_1 will be installed
+--> Processing Dependency: python-urllib3 >= 1.10.2-1 for package: python-requests-2.6.0-1.el7_1.noarch
+---> Package python-zope-event.noarch 0:4.0.3-2.el7 will be installed
+--> Running transaction check
+---> Package python-pycparser.noarch 0:2.14-1.el7 will be installed
+--> Processing Dependency: python-ply for package: python-pycparser-2.14-1.el7.noarch
+---> Package python-urllib3.noarch 0:1.10.2-5.el7 will be installed
+--> Running transaction check
+---> Package python-ply.noarch 0:3.4-11.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+===================================================================================================================================
+ Package                                    Arch                     Version                          Repository              Size
+===================================================================================================================================
+Installing:
+ python2-certbot-nginx                      noarch                   0.29.1-1.el7                     epel                    75 k
+Installing for dependencies:
+ certbot                                    noarch                   0.29.1-1.el7                     epel                    36 k
+ pyOpenSSL                                  x86_64                   0.13.1-4.el7                     base                   135 k
+ pyparsing                                  noarch                   1.5.6-9.el7                      base                    94 k
+ python-cffi                                x86_64                   1.6.0-5.el7                      base                   218 k
+ python-enum34                              noarch                   1.0.4-1.el7                      base                    52 k
+ python-idna                                noarch                   2.4-1.el7                        base                    94 k
+ python-ndg_httpsclient                     noarch                   0.3.2-1.el7                      epel                    43 k
+ python-ply                                 noarch                   3.4-11.el7                       base                   123 k
+ python-pycparser                           noarch                   2.14-1.el7                       base                   104 k
+ python-requests                            noarch                   2.6.0-1.el7_1                    base                    94 k
+ python-requests-toolbelt                   noarch                   0.8.0-1.el7                      epel                    77 k
+ python-urllib3                             noarch                   1.10.2-5.el7                     base                   102 k
+ python-zope-component                      noarch                   1:4.1.0-3.el7                    epel                   227 k
+ python-zope-event                          noarch                   4.0.3-2.el7                      epel                    79 k
+ python-zope-interface                      x86_64                   4.0.5-4.el7                      base                   138 k
+ python2-acme                               noarch                   0.29.1-1.el7                     epel                   146 k
+ python2-certbot                            noarch                   0.29.1-1.el7                     epel                   545 k
+ python2-configargparse                     noarch                   0.11.0-1.el7                     epel                    30 k
+ python2-cryptography                       x86_64                   1.7.2-2.el7                      base                   502 k
+ python2-future                             noarch                   0.16.0-6.el7                     epel                   799 k
+ python2-josepy                             noarch                   1.1.0-1.el7                      epel                    87 k
+ python2-mock                               noarch                   1.0.1-10.el7                     epel                    92 k
+ python2-parsedatetime                      noarch                   2.4-5.el7                        epel                    78 k
+ python2-pyasn1                             noarch                   0.1.9-7.el7                      base                   100 k
+ python2-pyrfc3339                          noarch                   1.0-2.el7                        epel                    13 k
+ python2-requests                           noarch                   2.6.0-0.el7                      epel                   2.9 k
+ python2-six                                noarch                   1.9.0-0.el7                      epel                   2.9 k
+
+Transaction Summary
+===================================================================================================================================
+Install  1 Package (+27 Dependent packages)
+
+Total download size: 4.0 M
+Installed size: 19 M
+Is this ok [y/d/N]: Y
+Downloading packages:
+(1/28): certbot-0.29.1-1.el7.noarch.rpm                                                                     |  36 kB  00:00:00
+(2/28): pyparsing-1.5.6-9.el7.noarch.rpm                                                                    |  94 kB  00:00:01
+(3/28): python-cffi-1.6.0-5.el7.x86_64.rpm                                                                  | 218 kB  00:00:00
+(4/28): pyOpenSSL-0.13.1-4.el7.x86_64.rpm                                                                   | 135 kB  00:00:01
+(5/28): python-enum34-1.0.4-1.el7.noarch.rpm                                                                |  52 kB  00:00:00
+(6/28): python-idna-2.4-1.el7.noarch.rpm                                                                    |  94 kB  00:00:00
+(7/28): python-ndg_httpsclient-0.3.2-1.el7.noarch.rpm                                                       |  43 kB  00:00:00
+(8/28): python-ply-3.4-11.el7.noarch.rpm                                                                    | 123 kB  00:00:00
+(9/28): python-pycparser-2.14-1.el7.noarch.rpm                                                              | 104 kB  00:00:00
+(10/28): python-requests-2.6.0-1.el7_1.noarch.rpm                                                           |  94 kB  00:00:00
+(11/28): python-requests-toolbelt-0.8.0-1.el7.noarch.rpm                                                    |  77 kB  00:00:00
+(12/28): python-urllib3-1.10.2-5.el7.noarch.rpm                                                             | 102 kB  00:00:00
+(13/28): python-zope-component-4.1.0-3.el7.noarch.rpm                                                       | 227 kB  00:00:00
+(14/28): python-zope-event-4.0.3-2.el7.noarch.rpm                                                           |  79 kB  00:00:00
+(15/28): python-zope-interface-4.0.5-4.el7.x86_64.rpm                                                       | 138 kB  00:00:00
+(16/28): python2-acme-0.29.1-1.el7.noarch.rpm                                                               | 146 kB  00:00:00
+(17/28): python2-certbot-0.29.1-1.el7.noarch.rpm                                                            | 545 kB  00:00:00
+(18/28): python2-certbot-nginx-0.29.1-1.el7.noarch.rpm                                                      |  75 kB  00:00:00
+(19/28): python2-configargparse-0.11.0-1.el7.noarch.rpm                                                     |  30 kB  00:00:00
+(20/28): python2-cryptography-1.7.2-2.el7.x86_64.rpm                                                        | 502 kB  00:00:00
+(21/28): python2-future-0.16.0-6.el7.noarch.rpm                                                             | 799 kB  00:00:00
+(22/28): python2-josepy-1.1.0-1.el7.noarch.rpm                                                              |  87 kB  00:00:00
+(23/28): python2-mock-1.0.1-10.el7.noarch.rpm                                                               |  92 kB  00:00:00
+(24/28): python2-parsedatetime-2.4-5.el7.noarch.rpm                                                         |  78 kB  00:00:00
+(25/28): python2-pyasn1-0.1.9-7.el7.noarch.rpm                                                              | 100 kB  00:00:00
+(26/28): python2-pyrfc3339-1.0-2.el7.noarch.rpm                                                             |  13 kB  00:00:00
+(27/28): python2-requests-2.6.0-0.el7.noarch.rpm                                                            | 2.9 kB  00:00:00
+(28/28): python2-six-1.9.0-0.el7.noarch.rpm                                                                 | 2.9 kB  00:00:00
+-----------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                              1.4 MB/s | 4.0 MB  00:00:02
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : python2-pyasn1-0.1.9-7.el7.noarch                                                                              1/28
+  Installing : pyOpenSSL-0.13.1-4.el7.x86_64                                                                                  2/28
+  Installing : python-zope-interface-4.0.5-4.el7.x86_64                                                                       3/28
+  Installing : python2-pyrfc3339-1.0-2.el7.noarch                                                                             4/28
+  Installing : python2-future-0.16.0-6.el7.noarch                                                                             5/28
+  Installing : python2-parsedatetime-2.4-5.el7.noarch                                                                         6/28
+  Installing : python-ndg_httpsclient-0.3.2-1.el7.noarch                                                                      7/28
+  Installing : python-zope-event-4.0.3-2.el7.noarch                                                                           8/28
+  Installing : 1:python-zope-component-4.1.0-3.el7.noarch                                                                     9/28
+  Installing : python2-mock-1.0.1-10.el7.noarch                                                                              10/28
+  Installing : python-ply-3.4-11.el7.noarch                                                                                  11/28
+  Installing : python-pycparser-2.14-1.el7.noarch                                                                            12/28
+  Installing : python-cffi-1.6.0-5.el7.x86_64                                                                                13/28
+  Installing : python-idna-2.4-1.el7.noarch                                                                                  14/28
+  Installing : python-urllib3-1.10.2-5.el7.noarch                                                                            15/28
+  Installing : python-requests-2.6.0-1.el7_1.noarch                                                                          16/28
+  Installing : python-requests-toolbelt-0.8.0-1.el7.noarch                                                                   17/28
+  Installing : python2-requests-2.6.0-0.el7.noarch                                                                           18/28
+  Installing : python2-configargparse-0.11.0-1.el7.noarch                                                                    19/28
+  Installing : pyparsing-1.5.6-9.el7.noarch                                                                                  20/28
+  Installing : python-enum34-1.0.4-1.el7.noarch                                                                              21/28
+  Installing : python2-cryptography-1.7.2-2.el7.x86_64                                                                       22/28
+  Installing : python2-josepy-1.1.0-1.el7.noarch                                                                             23/28
+  Installing : python2-six-1.9.0-0.el7.noarch                                                                                24/28
+  Installing : python2-acme-0.29.1-1.el7.noarch                                                                              25/28
+  Installing : python2-certbot-0.29.1-1.el7.noarch                                                                           26/28
+  Installing : certbot-0.29.1-1.el7.noarch                                                                                   27/28
+  Installing : python2-certbot-nginx-0.29.1-1.el7.noarch                                                                     28/28
+  Verifying  : python2-six-1.9.0-0.el7.noarch                                                                                 1/28
+  Verifying  : certbot-0.29.1-1.el7.noarch                                                                                    2/28
+  Verifying  : python-ndg_httpsclient-0.3.2-1.el7.noarch                                                                      3/28
+  Verifying  : python-requests-toolbelt-0.8.0-1.el7.noarch                                                                    4/28
+  Verifying  : 1:python-zope-component-4.1.0-3.el7.noarch                                                                     5/28
+  Verifying  : python2-future-0.16.0-6.el7.noarch                                                                             6/28
+  Verifying  : python-enum34-1.0.4-1.el7.noarch                                                                               7/28
+  Verifying  : pyparsing-1.5.6-9.el7.noarch                                                                                   8/28
+  Verifying  : python2-pyrfc3339-1.0-2.el7.noarch                                                                             9/28
+  Verifying  : python2-parsedatetime-2.4-5.el7.noarch                                                                        10/28
+  Verifying  : python2-configargparse-0.11.0-1.el7.noarch                                                                    11/28
+  Verifying  : python-zope-interface-4.0.5-4.el7.x86_64                                                                      12/28
+  Verifying  : python2-acme-0.29.1-1.el7.noarch                                                                              13/28
+  Verifying  : python-urllib3-1.10.2-5.el7.noarch                                                                            14/28
+  Verifying  : python-idna-2.4-1.el7.noarch                                                                                  15/28
+  Verifying  : python-ply-3.4-11.el7.noarch                                                                                  16/28
+  Verifying  : python2-requests-2.6.0-0.el7.noarch                                                                           17/28
+  Verifying  : python-cffi-1.6.0-5.el7.x86_64                                                                                18/28
+  Verifying  : pyOpenSSL-0.13.1-4.el7.x86_64                                                                                 19/28
+  Verifying  : python2-certbot-0.29.1-1.el7.noarch                                                                           20/28
+  Verifying  : python2-mock-1.0.1-10.el7.noarch                                                                              21/28
+  Verifying  : python-pycparser-2.14-1.el7.noarch                                                                            22/28
+  Verifying  : python2-josepy-1.1.0-1.el7.noarch                                                                             23/28
+  Verifying  : python-requests-2.6.0-1.el7_1.noarch                                                                          24/28
+  Verifying  : python-zope-event-4.0.3-2.el7.noarch                                                                          25/28
+  Verifying  : python2-certbot-nginx-0.29.1-1.el7.noarch                                                                     26/28
+  Verifying  : python2-pyasn1-0.1.9-7.el7.noarch                                                                             27/28
+  Verifying  : python2-cryptography-1.7.2-2.el7.x86_64                                                                       28/28
+
+Installed:
+  python2-certbot-nginx.noarch 0:0.29.1-1.el7
+
+Dependency Installed:
+  certbot.noarch 0:0.29.1-1.el7                                    pyOpenSSL.x86_64 0:0.13.1-4.el7
+  pyparsing.noarch 0:1.5.6-9.el7                                   python-cffi.x86_64 0:1.6.0-5.el7
+  python-enum34.noarch 0:1.0.4-1.el7                               python-idna.noarch 0:2.4-1.el7
+  python-ndg_httpsclient.noarch 0:0.3.2-1.el7                      python-ply.noarch 0:3.4-11.el7
+  python-pycparser.noarch 0:2.14-1.el7                             python-requests.noarch 0:2.6.0-1.el7_1
+  python-requests-toolbelt.noarch 0:0.8.0-1.el7                    python-urllib3.noarch 0:1.10.2-5.el7
+  python-zope-component.noarch 1:4.1.0-3.el7                       python-zope-event.noarch 0:4.0.3-2.el7
+  python-zope-interface.x86_64 0:4.0.5-4.el7                       python2-acme.noarch 0:0.29.1-1.el7
+  python2-certbot.noarch 0:0.29.1-1.el7                            python2-configargparse.noarch 0:0.11.0-1.el7
+  python2-cryptography.x86_64 0:1.7.2-2.el7                        python2-future.noarch 0:0.16.0-6.el7
+  python2-josepy.noarch 0:1.1.0-1.el7                              python2-mock.noarch 0:1.0.1-10.el7
+  python2-parsedatetime.noarch 0:2.4-5.el7                         python2-pyasn1.noarch 0:0.1.9-7.el7
+  python2-pyrfc3339.noarch 0:1.0-2.el7                             python2-requests.noarch 0:2.6.0-0.el7
+  python2-six.noarch 0:1.9.0-0.el7
+
+Complete!
