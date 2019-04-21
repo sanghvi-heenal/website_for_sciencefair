@@ -33,7 +33,7 @@ var storage = multer.diskStorage({
 		//cb(null, raw.toString('hex') + path.extname(file.originalname));
 	},
 });
-//############################################## ASSIGN USER ID ##############################################
+//############################################## STUDENT REGISTRATION ##############################################
 
 // var upload = multer({ storage: storage })
 var upload = multer({ dest: 'uploads/' });
@@ -74,7 +74,6 @@ router.post(
 					var project_id_value;
 
 					console.log('sclass :' + req.body.s_class);
-//################## LOGIC STARTS ################################################################
 					 await User.find(
 						{
 							s_class: parseInt(req.body.s_class),
@@ -113,66 +112,48 @@ router.post(
 								if (newuser) {
 									console.log("in user body" , newuser);
 
-									// var user_email = newuser.teacher_email;
-									// // lib to send email
-									// var text = '';
-									// var nodemailer = require('nodemailer');
-									// //add unsecured email address
-									// var transporter =  await nodemailer.createTransport(
-									// 	{
-									// 		host: 'smtpauth.usm.edu',
-									// 		Port: 587,
-									// 		Security: 'STARTTLS',
-									// 		auth: {
-									// 			user: 'sciencefair',
-									// 			pass: 'e2jsnx1im3d%',
-									// 		},
-									// 		socketTimeout: 60 * 1000,
-									// 	}
-									// );
-									// // setup email data with unicode symbols
-									// let mailOptions = {
-									// 	from: 'Region1msef@gmail.com', // sender address
-									// 	to: user_email, // list of receivers
-									// 	subject: 'Registration Mail', // Subject line
-									// 	//text: 'Hello world?', // plain text body
-									// 	html:
-									// 		'<div>Hi ' +
-									// 		newuser.teacher_f_name +
-									// 		' ,<p>Thank you for registering in MSEF Region-I Lower Fair.<br/><br/> Below are registered Details:<br/>Project name  :' +
-									// 		newuser.project_title +
-									// 		'<br/> Project ID : ' +
-									// 		newuser.project_id +
-									// 		'<br/> Student Name :' +
-									// 		newuser.s_name1 +
-									// 		'<br/> Teacher name : ' +
-									// 		newuser.teacher_f_name +
-									// 		' ' +
-									// 		newuser.teacher_last_name +
-									// 		'<br/> Teacher Email :' +
-									// 		newuser.teacher_email +
-									// 		'</p><br/><p>For any other questions email us at sciencefair.region1@gmail.com <br/>Or<br/>Region1msef@gmail.com</p></div>', // html body
-									// };
-									// transporter.sendMail(mailOptions, function(
-									// 	error,
-									// 	info
-									// ) {
-									// 	if (error) {
-									// 		console.log(error);
-									// 	} else {
-									// 		console.log(
-									// 			'Email sent: ' + info.response
-									// 		);
-									// 	}
-									// });
+									var user_email = newuser.teacher_email;
+									// lib to send email
+									var text = '';
+									var nodemailer = require('nodemailer');
+									//add unsecured email address
+									var transporter =  await nodemailer.createTransport(
+										{
+											host: 'host name',
+											Port:'port number',
+											Security: '############',
+											auth: {
+												user: 'email address',
+												pass: 'password',
+											},
+											socketTimeout: 60 * 1000,
+										}
+									);
+									// setup email data with unicode symbols
+									let mailOptions = {
+										from: 'email address', // sender address
+										to: user_email, // list of receivers
+										subject: 'Registration Mail', // Subject line
+										//text: 'Hello world?', // plain text body
+										html:
+											'<div>Hi ' +
+											newuser.teacher_f_name +
+											' ,<p>Thank you for registering in MSEF Region-I Lower Fair.<br/><br/> Below are registered Details:<br/>Project name  :' // html body
+									};
+									transporter.sendMail(mailOptions, function(
+										error,
+										info
+									) {
+										if (error) {
+											console.log(error);
+										} else {
+											console.log(
+												'Email sent: ' + info.response
+											);
+										}
+									});
 									
 								} else {
-									// res.send({
-									// 	status: false,
-									// 	code: 404,
-									// 	message:
-									// 		'Failed to Register User Try Again',
-									// });
 									console.log("Email could not be sent");
 								}
 							});	
@@ -614,26 +595,25 @@ router.post(
 							var text = '';
 							var nodemailer = require('nodemailer');
 							var transporter = nodemailer.createTransport({
-								host: 'smtpauth.usm.edu',
-								Port: 587,
-								Security: 'STARTTLS',
+								host: 'host name',
+								Port:'port number',
+								Security: '############',
 								auth: {
-									type: 'Plain',
-									user: 'sciencefair',
-									pass: 'e2jsnx1im3d%',
+									user: 'email address',
+									pass: 'password',
 								},
 								socketTimeout: 60 * 1000,
 							});
 							// setup email data with unicode symbols
 							let mailOptions = {
-								from: 'Region1msef@gmail.com', // sender address
+								from: 'email address', // sender address
 								to: user_email, // list of receivers
 								subject: 'Queries related to upperfair Region1', // Subject line
 								//text: 'Hello world?', // plain text body
 								html:
 									'<div>Hello ' +
 									newuser.name +
-									',</br><p> MSEF REGION-I Team has recieved your query , will get back to you soon<br/>Thank you for contacting us </p></div>', // html body
+									',</br><p> MESSAGE</p></div>', // html body
 							};
 							transporter.sendMail(mailOptions, function(
 								error,
@@ -1056,32 +1036,24 @@ router.post(
 										var nodemailer = require('nodemailer');
 										var transporter = nodemailer.createTransport(
 											{
-												host: 'smtpauth.usm.edu',
-												Port: 587,
-												Security: 'STARTTLS',
+												host: 'host name',
+												Port:'port number',
+												Security: '############',
 												auth: {
-													type: 'Plain',
-													user: 'sciencefair',
-													pass: 'e2jsnx1im3d%',
+													user: 'email address',
+													pass: 'password',
 												},
 												socketTimeout: 60 * 1000,
 											}
 										);
 
 										let mailOptions = {
-											from:
-												'Region1msef@gmail.com', // sender address
+											from:'email address', // sender address
 											to: admin_email, // list of receivers
 											subject: 'Registration Mail', // Subject line
 
 											html:
-												'<div>Thank you again for signing up with Lower Fair<br/>Projects have been assigned to you, please login and confirm<p> Your Login Details are as below <br/> <br/>JUDGE NAME : ' +
-												newuser.name +
-												'<br/> <br/> EMAIL: ' +
-												newuser.login_email +
-												'<br/><br/> PASSWORD: ' +
-												newuser.password +
-												'<br/><br/>Please save this message as it contains you username and password for the judging platform.<br/>A separate email will be sent at a later day with more information.</br></br> Feel free to contact us at<b> region1msef@gmail.com </b> with any additional questions.<br/> please Infrom the team if you have registered but cannot attend the fair </p></div>', // html body
+												'<div><p>MESSAGE</p></div>', // html body
 										};
 										transporter.sendMail(
 											mailOptions,
@@ -1224,26 +1196,22 @@ router.post(
 				if (tdata) {
 					var nodemailer = require('nodemailer');
 					var transporter = nodemailer.createTransport({
-						host: 'smtpauth.usm.edu',
-						Port: 587,
-						Security: 'STARTTLS',
+						host: 'hostname',
+						Port: 'port number',
+						Security: '#########',
 						auth: {
-							user: 'sciencefair',
-							pass: 'e2jsnx1im3d%',
+							user: 'email address',
+							pass: 'password',
 						},
 						socketTimeout: 60 * 1000,
 					});
 					let mailOptions = {
-						from: 'Region1msef@gmail.com', // sender address
+						from: 'email address', // sender address
 						to: login_email, // list of receivers
 						subject: 'Registration Mail', // Subject line
 						//text: 'Hello world?', // plain text body
 						html:
-							'<div>HI,</br><p> ScienceFair "Region-I Upperfair" <br/> Judge login details<br/> <br/> Email :' +
-							login_email +
-							'<br/><br/>Password :' +
-							tdata.password +
-							'</p> <br/>Thank you,<br/>Region-I MSEF</div>', // html body
+							'<div>HI,</br><p>MESSAGE</p></div>', // html body
 					};
 					transporter.sendMail(mailOptions, function(error, info) {
 						if (error) {
