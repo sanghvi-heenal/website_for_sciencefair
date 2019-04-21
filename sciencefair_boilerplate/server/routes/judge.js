@@ -103,36 +103,32 @@ router.post(
 			const {login_email} = req.body;
 			Judge.findOne({ login_email: login_email }).then(function(tdata) {
 				if (tdata) {
-					// var nodemailer = require('nodemailer');
-					// var transporter = nodemailer.createTransport({
-					// 	host: 'smtpauth.usm.edu',
-					// 	Port: 587,
-					// 	Security: 'STARTTLS',
-					// 	auth: {
-					// 		user: 'sciencefair',
-					// 		pass: 'e2jsnx1im3d%',
-					// 	},
-					// 	socketTimeout: 60 * 1000,
-					// });
-					// let mailOptions = {
-					// 	from: 'sciencefair.region1@gmail.com', // sender address
-					// 	to: login_email, // list of receivers
-					// 	subject: 'Registration Mail', // Subject line
-					// 	//text: 'Hello world?', // plain text body
-					// 	html:
-					// 		'<div>HI,</br><p> ScienceFair "Region-I Upperfair" <br/> Judge login details<br/> <br/> Email :' +
-					// 		login_email +
-					// 		'<br/><br/>Password :' +
-					// 		tdata.password +
-					// 		'</p> <br/>Thank you,<br/>Region-I MSEF</div>', // html body
-					// };
-					// transporter.sendMail(mailOptions, function(error, info) {
-					// 	if (error) {
-					// 		console.log(error);
-					// 	} else {
-					// 		console.log('Email sent: ' + info.response);
-					// 	}
-					// });
+					var nodemailer = require('nodemailer');
+					var transporter = nodemailer.createTransport({
+						host: 'host name',
+						Port:'port number',
+						Security: '############',
+						auth: {
+							user: 'email address',
+							pass: 'password',
+						},
+						socketTimeout: 60 * 1000,
+					});
+					let mailOptions = {
+						from: 'email address', // sender address
+						to: login_email, // list of receivers
+						subject: 'Registration Mail', // Subject line
+						//text: 'Hello world?', // plain text body
+						html:
+							'<div>MESSAGE</div>', // html body
+					};
+					transporter.sendMail(mailOptions, function(error, info) {
+						if (error) {
+							console.log(error);
+						} else {
+							console.log('Email sent: ' + info.response);
+						}
+					});
 					res.send({
 						status: true,
 						code: 200,

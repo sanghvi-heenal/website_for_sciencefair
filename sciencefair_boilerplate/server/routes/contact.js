@@ -50,13 +50,12 @@ router.post(
 							var text = '';
 							var nodemailer = require('nodemailer');
 							var transporter = nodemailer.createTransport({
-								host: 'smtpauth.usm.edu',
-								Port: 587,
-								Security: 'STARTTLS',
-								auth: {
-									type: 'Plain',
-									user: 'sciencefair',
-									pass: 'e2jsnx1im3d%',
+								host: 'host name',
+											Port:'port number',
+											Security: '############',
+											auth: {
+												user: 'email address',
+												pass: 'password',
 								},
 								socketTimeout: 60 * 1000,
 							});
@@ -69,7 +68,7 @@ router.post(
 								html:
 									'<div>Hello ' +
 									newuser.name +
-									',</br><p> MSEF REGION-I Team has recieved your query , will get back to you soon<br/>Thank you for contacting us </p></div>', // html body
+									'MESSAGE</p></div>', // html body
 							};
 							transporter.sendMail(mailOptions, function(
 								error,

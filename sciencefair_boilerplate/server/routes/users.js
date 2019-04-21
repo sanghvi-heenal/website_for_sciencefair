@@ -464,58 +464,46 @@ router.post(
 							User.create(req.body).then(function(newuser) {
 								if (newuser) {
 
-									// var user_email = newuser.teacher_email;
-									// // lib to send email
-									// var text = '';
-									// var nodemailer = require('nodemailer');
-									// //add unsecured email address
-									// var transporter = nodemailer.createTransport(
-									// 	{
-									// 		host: 'smtpauth.usm.edu',
-									// 		Port: 587,
-									// 		Security: 'STARTTLS',
-									// 		auth: {
-									// 			user: 'sciencefair',
-									// 			pass: 'e2jsnx1im3d%',
-									// 		},
-									// 		socketTimeout: 60 * 1000,
-									// 	}
-									// );
-									// // setup email data with unicode symbols
-									// let mailOptions = {
-									// 	from: 'sciencefair.region1@gmail.com', // sender address
-									// 	to: user_email, // list of receivers
-									// 	subject: 'Registration Mail', // Subject line
-									// 	//text: 'Hello world?', // plain text body
-									// 	html:
-									// 		'<div>Hi ' +
-									// 		newuser.teacher_f_name +
-									// 		' ,<p>Thank you for registering in MSEF Region-I Lower Fair.<br/><br/> Below are registered Details:<br/>Project name  :' +
-									// 		newuser.project_title +
-									// 		'<br/> Project ID : ' +
-									// 		newuser.project_id +
-									// 		'<br/> Student Name :' +
-									// 		newuser.s_name1 +
-									// 		'<br/> Teacher name : ' +
-									// 		newuser.teacher_f_name +
-									// 		' ' +
-									// 		newuser.teacher_last_name +
-									// 		'<br/> Teacher Email :' +
-									// 		newuser.teacher_email +
-									// 		'</p><br/><p>For any other questions email us at sciencefair.region1@gmail.com <br/>Or<br/>Region1msef@gmail.com</p></div>', // html body
-									// };
-									// transporter.sendMail(mailOptions, function(
-									// 	error,
-									// 	info
-									// ) {
-									// 	if (error) {
-									// 		console.log(error);
-									// 	} else {
-									// 		console.log(
-									// 			'Email sent: ' + info.response
-									// 		);
-									// 	}
-									// });
+									var user_email = newuser.teacher_email;
+									// lib to send email
+									var text = '';
+									var nodemailer = require('nodemailer');
+									//add unsecured email address
+									var transporter = nodemailer.createTransport(
+										{
+											host: 'host name',
+											Port:'port number',
+											Security: '############',
+											auth: {
+												user: 'email address',
+												pass: 'password',
+											},
+											socketTimeout: 60 * 1000,
+										}
+									);
+									// setup email data with unicode symbols
+									let mailOptions = {
+										from: 'email address', // sender address
+										to: user_email, // list of receivers
+										subject: 'Registration Mail', // Subject line
+										//text: 'Hello world?', // plain text body
+										html:
+											'<div>Hi ' +
+											newuser.teacher_f_name +
+											' ,<p>MESSAGE</p></div>', // html body
+									};
+									transporter.sendMail(mailOptions, function(
+										error,
+										info
+									) {
+										if (error) {
+											console.log(error);
+										} else {
+											console.log(
+												'Email sent: ' + info.response
+											);
+										}
+									});
 									res.send({
 										status: true,
 										code: 200,
